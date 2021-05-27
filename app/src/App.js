@@ -1,12 +1,47 @@
-// Bk7caXDZGUQOG8Tq
-import "./App.css";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import { useState, useEffect } from "react";
+
+import "./App.css";
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
 function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [open, setOpen] = useState(false);
+  const [messege, setMessege] = useState("please fill all the fields");
+  const [showProgress, setShowProgress] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
+    setShowProgress(true);
+    if (!username || !password) {
+      setOpen(true);
+    }
+    setShowProgress(false);
   };
   return (
     <div className="app">
@@ -31,9 +66,16 @@ function App() {
           type="password"
           placeholder="סיסמה"
         />
+        {showProgress && <CircularProgress className="progress" />}
         <button type="submit" onClick={submitHandler}>
           התחבר
         </button>
+
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error">
+            {messege}
+          </Alert>
+        </Snackbar>
       </form>
     </div>
   );
