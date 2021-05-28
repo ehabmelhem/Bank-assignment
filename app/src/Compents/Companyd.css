@@ -1,0 +1,78 @@
+.details {
+  background-image: url("https://loan.btbisrael.co.il/assets/images/backgrounds/lovim-login.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.container {
+  /* direction: rtl; */
+  display: grid;
+  grid-template-columns: 200px 200px;
+  float: right;
+  margin-right: 30px;
+  gap: 10px;
+  column-gap: 20px;
+  margin-top: 350px;
+  flex-wrap: wrap;
+}
+.container::before {
+  content: "אנא השלימו את הפרטים הבאים";
+  position: absolute;
+  top: 250px;
+  right: 150px;
+  font-size: large;
+  font-weight: bold;
+}
+.d__item {
+  width: 200px;
+  height: 40px;
+  direction: rtl;
+}
+.next_icon {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 999px;
+  position: absolute;
+  bottom: 90px;
+  left: 200px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.next_icon:hover {
+  transform: scale(0.75);
+}
+.next_icon::before {
+  content: "המשך";
+  position: absolute;
+  bottom: -25px;
+  right: 3px;
+}
+@media only screen and (max-width: 414px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    margin-right: 0px;
+    margin-top: 190px;
+  }
+  .container::before {
+    content: "אנא השלימו את הפרטים הבאים";
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .d__item {
+    width: 96%;
+    margin-right: 300px;
+  }
+  .next_icon {
+    left: 100px;
+  }
+}

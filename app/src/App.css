@@ -67,9 +67,9 @@ input {
   .flex > input {
     height: 55px;
   }
-  @media only screen and (max-width: 414px) {
-    .flex > input {
-      width: 99%;
-    }
+}
+@media only screen and (max-width: 414px) {
+  .flex > input {
+    width: 99%;
   }
 }
