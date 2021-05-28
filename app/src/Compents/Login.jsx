@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 // import "./App.css";
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -15,6 +16,8 @@ function Login() {
   const [open, setOpen] = useState(false);
   const [messege, setMessege] = useState("please fill all the fields");
   const [showProgress, setShowProgress] = useState(false);
+  let history = useHistory();
+
   const handleClick = () => {
     setOpen(true);
   };
@@ -45,7 +48,12 @@ function Login() {
         .then((r) => r.json())
         .then((data) => {
           if (data.ok === true) {
-            console.log("good");
+            history.push({
+              pathname: "/details",
+              state: {
+                username: username,
+              },
+            });
           } else {
             setMessege("PLEASE INSERT RIGHT VALID");
             setOpen(true);

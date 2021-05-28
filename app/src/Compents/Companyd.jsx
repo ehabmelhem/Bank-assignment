@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Companyd.css";
 import ArrowBackOutlinedIcon from "@material-ui/icons/ArrowBackOutlined";
-function Companyd(username) {
+import { useLocation } from "react-router-dom";
+
+function Companyd() {
+  const location = useLocation();
+
   const [firstname, setFirstname] = useState("");
   const [last, setLastname] = useState("");
   const [ID, setID] = useState("");
@@ -11,7 +15,7 @@ function Companyd(username) {
   const [companyname, setCompanyName] = useState("");
   const [companynumber, setCompanyNumber] = useState("");
   useEffect(() => {
-    fetch(`/api/Login/getData?username=${username}`)
+    fetch(`/api/Login/getData?username=${location.state.username}`)
       .then((r) => r.json())
       .then((data) => {
         console.log(data);
