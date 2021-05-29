@@ -1,0 +1,94 @@
+.account {
+  background-image: url("https://loan.btbisrael.co.il/assets/images/backgrounds/lovim-login.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.forward__icon {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 10px;
+  float: right;
+  margin-right: 60px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+.forward__icon:hover {
+  transform: scale(0.75);
+}
+.forward__icon::before {
+  content: "המשך";
+  position: absolute;
+  bottom: -25px;
+  right: 3px;
+}
+.account__container {
+  margin-top: 100px;
+  direction: rtl;
+  margin-right: 50px;
+}
+.account__item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  border: 1px solid rgb(105, 253, 105);
+  border-radius: 12px;
+  padding-right: 4px;
+}
+.line {
+  margin-left: 2px;
+  margin-right: 4px;
+  color: rgb(105, 253, 105);
+  background-color: rgb(105, 253, 105);
+  width: 2px;
+  height: 35px;
+}
+.account__item > select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  direction: ltr;
+}
+.account__item > input {
+  width: 100px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.account__details {
+  margin-top: 5px;
+  display: flex;
+  width: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account__details > button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.account__details > button:active {
+  transform: scale(1.05);
+}
+.addAccount {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.addAccount:active {
+  transform: scale(1.05);
+}

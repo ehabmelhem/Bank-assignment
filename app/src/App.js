@@ -7,11 +7,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Companyd from "./Compents/Companyd";
 import "./App.css";
 import Login from "./Compents/Login";
+import BankAccount from "./Compents/BankAccount";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/bankacc">
+          <BankAccount />
+        </Route>
         <Route path="/details">
           <Companyd />
         </Route>

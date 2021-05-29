@@ -31,6 +31,7 @@
   width: 200px;
   height: 40px;
   direction: rtl;
+  outline: none;
 }
 .next_icon {
   border: 2px solid black;
@@ -52,6 +53,10 @@
   bottom: -25px;
   right: 3px;
 }
+.error {
+  border: 1px solid red;
+}
+
 @media only screen and (max-width: 414px) {
   .container {
     display: grid;
@@ -73,6 +78,6 @@
     margin-right: 300px;
   }
   .next_icon {
-    left: 100px;
+    left: 150px;
   }
 }
