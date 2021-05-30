@@ -1,0 +1,23 @@
+.receipt {
+  background-image: url("https://loan.btbisrael.co.il/assets/images/backgrounds/lovim-login.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+.rec__container {
+  background-color: white;
+  position: relative;
+  border: 1px solid black;
+  width: fit-content;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  top: 150px;
+}
+h4 > span {
+  color: green;
+}

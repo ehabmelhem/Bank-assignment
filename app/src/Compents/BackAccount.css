@@ -23,10 +23,10 @@
   transform: scale(0.75);
 }
 .forward__icon::before {
-  content: "המשך";
+  content: "חזור";
   position: absolute;
-  bottom: -25px;
-  right: 3px;
+  top: 70px;
+  right: 80px;
 }
 .account__container {
   margin-top: 100px;
@@ -91,4 +91,19 @@
 }
 .addAccount:active {
   transform: scale(1.05);
+}
+@media only screen and (max-width: 414px) {
+  .forward__icon::before {
+    /* content: "חזור";
+    position: absolute; */
+    top: 165px;
+    left: 265px;
+  }
+  .account__details {
+    display: grid;
+    gap: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: fit-content;
+  }
 }

@@ -68,5 +68,24 @@ exports.addAccounts = (req, res) => {
     res.send({ ok: false, messege: "hello world" });
   }
 };
-
+exports.addLoan = (req, res) => {
+  try {
+    const { username, companyname, companynumber, Loan, LoanTime } = req.body;
+    company
+      .update(
+        {
+          userID: username,
+          companyName: companyname,
+          companyNumber: companynumber,
+        },
+        { Loan: Loan, LoanTime: LoanTime }
+      )
+      .then(() => {
+        console.log("update loan hass been success full");
+      });
+    res.send({ ok: true });
+  } catch (e) {
+    res.send({ ok: false });
+  }
+};
 const companyModel = require("../Schema/companyModel");

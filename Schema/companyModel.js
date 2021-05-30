@@ -12,5 +12,7 @@ const company = mongoose.model("companyCollection", {
       id: String,
     },
   ],
+  Loan: String,
+  LoanTime: String,
 });
 module.exports = company;

@@ -185,6 +185,19 @@ function BankAccount() {
                 .then((data) => {
                   console.log(data);
                   if (data.ok === true) {
+                    history.push({
+                      pathname: "/loan",
+                      state: {
+                        email: location.state.email,
+                        ID: location.state.ID,
+                        companyname: location.state.companyname,
+                        companynumber: location.state.companynumber,
+                        firstname: location.state.firstname,
+                        last: location.state.last,
+                        dateofbirth: location.state.dateofbirth,
+                        username: location.state.username,
+                      },
+                    });
                   }
                 });
             }

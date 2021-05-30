@@ -8,11 +8,19 @@ import Companyd from "./Compents/Companyd";
 import "./App.css";
 import Login from "./Compents/Login";
 import BankAccount from "./Compents/BankAccount";
+import Loan from "./Compents/Loan";
+import Receipt from "./Compents/Receipt";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/receipt">
+          <Receipt />
+        </Route>
+        <Route path="/loan">
+          <Loan />
+        </Route>
         <Route path="/bankacc">
           <BankAccount />
         </Route>
