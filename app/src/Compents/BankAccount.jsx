@@ -147,7 +147,7 @@ function BankAccount() {
           onClick={() => {
             setAllAccounts((allAccounts) => [
               ...allAccounts,
-              { Bank: "", branch: "", accountNumber: "", id: uuidv4() },
+              { Bank: "פועלים", branch: "", accountNumber: "", id: uuidv4() },
             ]);
           }}
           className="addAccount"
