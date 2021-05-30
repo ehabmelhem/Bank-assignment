@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Login = require("./Router/user");
+const Company = require("./Router/company");
 const app = express();
 app.use(bodyParser.json());
 // mongodb+srv://ehab:Bk7caXDZGUQOG8Tq@cluster0.7c2tr.mongodb.net/test
@@ -17,6 +18,7 @@ db.once("open", () => {
 });
 
 app.use("/api/Login", Login);
+app.use("/api/company", Company);
 
 const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {

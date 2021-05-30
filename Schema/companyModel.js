@@ -6,9 +6,10 @@ const company = mongoose.model("companyCollection", {
   Haazka: String,
   bankAccounts: [
     {
-      bankName: String,
+      Bank: String,
       branch: String,
       accountNumber: String,
+      id: String,
     },
   ],
 });
